@@ -3,10 +3,6 @@
 class ProgressBar extends Component {
   constructor (attributes) {
     super(attributes)
-
-    // this.state = {
-    //   progress: 20// this.getAttribute('progress')
-    // }
   }
 
   render () {
@@ -25,5 +21,3 @@ class ProgressBar extends Component {
     `
   }
 }
-
-// Component.define(ProgressBar)

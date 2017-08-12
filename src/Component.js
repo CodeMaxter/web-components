@@ -43,10 +43,6 @@ class Component extends HTMLElement {
 
   onEvent (type, target,  handler) {
     this.addEventListener(type, (event) => {
-      // if(event.path[0] === target) {
-      // if(target.isEqualNode(event.path[0]) ||
-      //   target.isEqualNode(event.path[0].parentNode)
-      // ) {
       if (event.path[0].matches(target)) {
         handler(event)
       }
