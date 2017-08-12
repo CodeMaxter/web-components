@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Component</title>
+</head>
+<body>
+  <!-- <progress-bar progress="0"></progress-bar> -->
+  <div id="container"></div>
+
+  <script src="../src/Component.js"></script>
+  <script src="src/ProgressBar.js"></script>
+
+  <script>
+      // setTimeout(() => {
+      //   document.querySelector('simple-component').setState({name: 'CodeMaxter'})
+      //   console.log(document.querySelector('simple-component').state)
+      // }, 1000);
+
+    // const progressBar = Component.define(ProgressBar)
+
+    const progressBar = Component.define(
+      ProgressBar,
+      document.querySelector('#container'),
+      {progress: 0}
+    )
+
+    for (let i = 0; i <= 10; i++) {
+      setTimeout(() => {
+        // document.querySelector('progress-bar').setState({progress: i * 10})
+        progressBar.setState({progress: i * 10})
+      }, i * 100)
+    }
+  </script>
+</body>
+</html>

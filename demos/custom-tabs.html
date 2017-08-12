@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tabs Component</title>
+</head>
+
+<body class="darktheme">
+  <custom-tabs role="tablist" background>
+    <button slot="title">Tab 1</button>
+    <button slot="title" selected>Tab 2</button>
+    <button slot="title">Tab 3</button>
+
+    <section>Content panel 1</section>
+    <section>Content panel 2</section>
+    <section>Content panel 3</section>
+  </custom-tabs>
+
+  <script src="../src/Component.js"></script>
+  <script src="src/CustomTabs.js"></script>
+
+  <script>
+    Component.define(CustomTabs)
+  </script>
+</body>
+
+</html>
