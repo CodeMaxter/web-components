@@ -4,20 +4,20 @@ class CustomModal extends Component {
   constructor (attributes) {
     super(attributes)
 
-    this.onClose = this.onClose.bind(this)
+    this.close = this.close.bind(this)
   }
 
   connectedCallback () {
     this.shadowRoot.querySelector('.close')
-      .addEventListener('click', this.onClose)
+      .addEventListener('click', this.close)
   }
   
   disconnectedCallback () {
     this.shadowRoot.querySelector('.close')
-      .removeEventListener('click', this.onClose)
+      .removeEventListener('click', this.close)
   }
 
-  onClose () {
+  close () {
     this.shadowRoot.querySelector('.modal').classList.remove('open')
   }
   
@@ -46,7 +46,7 @@ class CustomModal extends Component {
           display: block;
         }
         /* Modal Content */
-        .modal-content {
+        .content {
           background-color: #fefefe;
           border: 1px solid #888;
           margin: auto;
@@ -69,7 +69,7 @@ class CustomModal extends Component {
       </style>
       <div class="modal">
         <!-- Modal content -->
-        <div class="modal-content">
+        <div class="content">
           <span class="close">&times;</span>
           <p>Some text in the Modal..</p>
         </div>
