@@ -54,7 +54,6 @@ class Component extends HTMLElement {
   }
 
   connectedCallback () {
-    console.log('connectedCallback()')
   }
 
   setState (state) {

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal Component</title>
+</head>
+
+<body class="darktheme">
+  <!-- Trigger/Open The Modal -->
+  <button id="my-btn">Open Modal</button>
+
+  <custom-modal id="my-modal" />
+
+  <script src="../src/Component.js"></script>
+  <script src="src/CustomModal.js"></script>
+
+  <script>
+    Component.define(CustomModal)
+
+    // Get the modal
+    const modal = document.querySelector('#my-modal')
+
+    // Get the button that opens the modal
+    const btn = document.querySelector('#my-btn')
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.open()
+    }
+  </script>
+</body>
+
+</html>
